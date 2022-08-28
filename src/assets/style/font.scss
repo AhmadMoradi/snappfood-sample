@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'IRANSansMobile';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('https://snappfood.ir/pwa/assets/fonts/IRANSansMobile.ttf');
+}
+@font-face {
+  font-family: 'IRANSansMobile';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url('https://snappfood.ir/pwa/assets/fonts/IRANSansMobile_Bold.ttf');
+}
+@font-face {
+  font-family: 'SnapWeb';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url('https://snappfood.ir/downloads/fonts/SnppWeb-Fonts/SnappWeb2.0-Regular.woff');
+}
+@font-face {
+  font-family: 'SnapWeb';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url('https://snappfood.ir/downloads/fonts/SnppWeb-Fonts/SnappWeb2.0-Bold.woff');
+}
+@font-face {
+  font-family: 'SnapWeb';
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url('https://snappfood.ir/downloads/fonts/SnppWeb-Fonts/SnappWeb2.0-Light.woff');
+}
+
+:root {
+  font-family: IRANSansMobile;  
+}
