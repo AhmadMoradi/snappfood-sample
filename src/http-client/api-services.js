@@ -5,3 +5,7 @@ export function fetchServices(params) {
     params,
   });
 }
+
+export const fetchHomeData = (params) => {
+  return Api.get("/search/api/v1/desktop/new-home", { params });
+};
