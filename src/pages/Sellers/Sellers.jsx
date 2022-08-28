@@ -24,7 +24,12 @@ const Sellers = () => {
   const params = useMemo(() => {
     const query = new URLSearchParams(location.search);
     const queryObj = Object.fromEntries(query);
-    return { filters: { superType: [+queryObj.superType] }, lat, long };
+    return {
+      filters: { superType: [+queryObj.superType] },
+      category: { value: +queryObj.category },
+      lat,
+      long,
+    };
   }, [location.search]);
 
   useEffect(() => {

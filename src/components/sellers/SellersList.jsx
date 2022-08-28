@@ -7,7 +7,9 @@ const SellersList = ({ sellers }) => {
   return (
     <>
       {!sellers ? (
-        <Loader />
+        <div className="flex justify-center grow">
+          <Loader />
+        </div>
       ) : (
         <div className="grid grid-cols-3 gap-4 basis-3/4 px-4">
           {sellers.map((shop) => (

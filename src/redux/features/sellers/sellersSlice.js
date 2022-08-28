@@ -14,6 +14,7 @@ const sellersSlice = createSlice({
       .addCase(getSellers.pending, (state) =>
         produce(state, (draft) => {
           draft.status = "loading";
+          draft.data = null;
         })
       )
       .addCase(getSellers.fulfilled, (state, action) =>

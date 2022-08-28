@@ -12,9 +12,12 @@ const ShopInfo = ({ shop: { data: shop } }) => {
     commentCount,
     is_express,
     delivery_fee,
+    code,
   } = shop || {};
+  const to = `/vendor/${title.replace(/ /g, "_")}-r-${code}`;
+
   return (
-    <Link to="/" className="shadow rounded-lg overflow-hidden">
+    <Link to={to} className="shadow rounded-lg overflow-hidden">
       <div className="min-h-[11rem] max-h-44 relative">
         <div className="max-h-36 overflow-hidden">
           <img
