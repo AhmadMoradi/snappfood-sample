@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import Loader from "~/components/common/loader/Loader";
 
@@ -14,7 +15,7 @@ const Categories = () => {
     cuisines &&
     cuisines.map((c) => (
       <div key={c.id} className="p-4 basis-1/6">
-        <a href="#">
+        <Link to={`/sellers?superType=1&category=${c.id}`}>
           <div className="p-0.25 overflow-hidden rounded-xl relative">
             <img src={c.icon} />
             <div className="absolute bottom-0 right-0 rounded-tl-xl bg-white px-3 py-1 flex items-center">
@@ -31,22 +32,22 @@ const Categories = () => {
               </svg>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     ));
 
   return (
     <>
-      {status === "loading" ? (
-        <div className="flex items-center justify-center">
-          <Loader />
-        </div>
-      ) : (
-        <section>
-          <h2 className="font-bold mb-4">دسته بندی ها</h2>
+      <section>
+        <h2 className="font-bold mb-4">دسته بندی ها</h2>
+        {status === "loading" ? (
+          <div className="flex items-center justify-center">
+            <Loader />
+          </div>
+        ) : (
           <div className="flex flex-wrap">{CuisinesList}</div>
-        </section>
-      )}
+        )}
+      </section>
     </>
   );
 };

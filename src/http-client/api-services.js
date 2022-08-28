@@ -10,4 +10,6 @@ export const fetchHomeData = (params) => {
   return Api.get("/search/api/v1/desktop/new-home", { params });
 };
 
-export const fetchVendorsList = (params) => {};
+export const fetchSellers = (params) => {
+  return Api.get("/search/api/v1/desktop/vendors-list", { params });
+};

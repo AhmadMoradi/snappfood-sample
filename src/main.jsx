@@ -7,6 +7,7 @@ import "~/assets/style/main.scss";
 import store from "~/redux/store";
 
 import Home from "~/pages/Home";
+import Sellers from "./pages/Sellers";
 import NotFound from "~/pages/404";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -14,7 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/sellers" element={<Sellers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
