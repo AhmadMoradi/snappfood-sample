@@ -1,6 +1,6 @@
 import Api from "~/http-client/api.js";
 
-export function getServices(params) {
+export function fetchServices(params) {
   return Api.get("search/api/v1/desktop/service", {
     params,
   });
