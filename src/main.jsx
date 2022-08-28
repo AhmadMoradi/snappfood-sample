@@ -7,7 +7,8 @@ import "~/assets/style/main.scss";
 import store from "~/redux/store";
 
 import Home from "~/pages/Home";
-import Sellers from "./pages/Sellers";
+import Sellers from "~/pages/Sellers";
+import Vendor from "~/pages/Vendor";
 import NotFound from "~/pages/404";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/sellers" element={<Sellers />} />
+          <Route path="/vendor/:id" element={<Vendor />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
