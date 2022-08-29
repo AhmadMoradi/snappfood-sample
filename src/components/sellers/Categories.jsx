@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 
 const Categories = ({ categories: { data: categories } }) => {
+  if (!(categories && categories.length)) {
+    return;
+  }
+
   return (
     <>
-      {categories && (
+      {
         <nav className="p-3 border rounded-lg border-light-300">
           <div className="flex items-center justify-start text-sm h-10 bg-gray-100 px-3 rounded-md ">
             همه دسته بندی ها
@@ -18,7 +22,7 @@ const Categories = ({ categories: { data: categories } }) => {
             </div>
           ))}
         </nav>
-      )}
+      }
     </>
   );
 };
