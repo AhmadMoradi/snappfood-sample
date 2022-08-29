@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { engToPerDigits, numberHumanize } from "~/utils";
+
 const VendorProduct = ({ product }) => {
   const { title, description, price } = product;
   const thumbSrc = product.images[0]?.imageThumbnailSrc;
@@ -18,7 +20,7 @@ const VendorProduct = ({ product }) => {
         </div>
       </div>
       <div className="px-3 h-16 flex items-center justify-between px-3">
-        <span>{price}</span>
+        <span>{engToPerDigits(numberHumanize(price))}</span>
         <button
           style={{
             backgroundColor: "rgb(255, 56, 172)",

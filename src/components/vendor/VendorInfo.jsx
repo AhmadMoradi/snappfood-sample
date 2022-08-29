@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 
+import { engToPerDigits, numberHumanize } from "~/utils";
+
 const VendorInfo = ({ vendor }) => {
   if (!vendor) return;
   return (
@@ -11,7 +13,7 @@ const VendorInfo = ({ vendor }) => {
         className="row-span-2 rounded-lg"
       />
       <span className="text-xs text-gray-300 self-end">
-        ({vendor.commentCount} نظر)
+        ({engToPerDigits(numberHumanize(vendor.commentCount))} نظر)
       </span>
       <h1 className="text-sm font-bold">{vendor.title}</h1>
     </article>
