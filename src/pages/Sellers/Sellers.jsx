@@ -38,7 +38,7 @@ const Sellers = () => {
   useEffect(() => {
     dispatch(getServices({ lat, long }));
     dispatch(getSellers(params));
-  }, []);
+  }, [location.search]);
 
   return (
     <Default>
