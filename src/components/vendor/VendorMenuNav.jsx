@@ -13,6 +13,7 @@ const VendorMenuNav = ({ menus }) => {
       {menus &&
         menus.map((menu, index) => (
           <a
+            key={menu.categoryId}
             href={`#${menu.categoryId}`}
             onClick={() => onClick(index)}
             className={
@@ -22,7 +23,7 @@ const VendorMenuNav = ({ menus }) => {
                 : "pl-3")
             }
           >
-            <p key={menu.categoryId}>{menu.category}</p>
+            <p>{menu.category}</p>
           </a>
         ))}
     </nav>
